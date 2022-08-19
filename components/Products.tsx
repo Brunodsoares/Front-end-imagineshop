@@ -17,8 +17,9 @@ interface ProductsProps {
   products: Product[];
 }
 
-const Products = ({ products }: ProductsProps) => {
+const Products = ( {products} : ProductsProps) => {
   console.log(products);
+  console.log("qualquer")
   return (
     <ProductContainer>
       <Title>

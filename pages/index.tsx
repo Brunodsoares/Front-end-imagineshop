@@ -31,7 +31,7 @@ const Home: NextPage = ({ productsApi }: any) => {
   return (
     <Main>
       <Banner image={BannerImage} width={1140} heigth={325} />
-      <Products products={[productsApi]} />
+      <Products products={productsApi} />
     </Main>
   );
 };
