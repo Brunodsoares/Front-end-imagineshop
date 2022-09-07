@@ -19,7 +19,6 @@ interface ProductsProps {
 
 const Products = ( {products} : ProductsProps) => {
   console.log(products);
-  console.log("qualquer")
   return (
     <ProductContainer>
       <Title>
@@ -31,7 +30,7 @@ const Products = ( {products} : ProductsProps) => {
             <ProductItem key={product._id}>
               <Link href="/">
                 <a>
-                  {/* <Image src='' width={230} height={230}  alt='product image' /> */}
+                  <Image src={product.image} width={230} height={230}  alt='product image' />
                   <ProductName>{product.name}</ProductName>
                   <ProductPrice>{product.formattedPrice}</ProductPrice>
                   <ProductSplitPrice>10x de {product.splitPrice} sem juros</ProductSplitPrice>

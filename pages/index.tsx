@@ -10,6 +10,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const result = await fetch(`${api}/products`);
   const data = await result.json();
   data.forEach((product: any) => {
+    product.image = `${api}/uploads/${product.fileName}`;
     product.formattedPrice = (new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
