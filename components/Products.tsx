@@ -18,7 +18,6 @@ interface ProductsProps {
 }
 
 const Products = ( {products} : ProductsProps) => {
-  console.log(products);
   return (
     <ProductContainer>
       <Title>
@@ -28,7 +27,7 @@ const Products = ( {products} : ProductsProps) => {
         {products &&
           products.map((product) => (
             <ProductItem key={product._id}>
-              <Link href="/">
+              <Link href={`/products/${product._id}`} >
                 <a>
                   <Image src={product.image} width={230} height={230}  alt='product image' />
                   <ProductName>{product.name}</ProductName>
